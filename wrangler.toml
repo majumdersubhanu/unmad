@@ -1,0 +1,13 @@
+name = "unmad-cultural-platform"
+main = "src/worker.js"
+compatibility_date = "2026-08-09"
+
+routes = [
+  { pattern = "unmad.me/*", zone_name = "unmad.me" },
+  { pattern = "www.unmad.me/*", zone_name = "unmad.me" }
+]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "unmad-preregistrations"
+database_id = "98818eb1-1fe3-4393-adcd-17c13262dc44"
