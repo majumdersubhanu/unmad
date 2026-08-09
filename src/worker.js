@@ -1,4 +1,7 @@
 import { HTML } from './site.js';
+import { withLoader } from './loader.js';
+
+const PAGE_HTML = withLoader(HTML);
 
 const json = (body, status = 200) =>
   new Response(JSON.stringify(body), {
@@ -58,7 +61,7 @@ export default {
       return new Response(null, { headers: { allow: 'POST, OPTIONS' } });
     }
 
-    return new Response(HTML, {
+    return new Response(PAGE_HTML, {
       headers: {
         'content-type': 'text/html; charset=utf-8',
         'cache-control': 'public, max-age=60',
